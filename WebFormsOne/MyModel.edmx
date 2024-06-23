@@ -4,293 +4,52 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DNACloudDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="GradeGroups">
-          <Key>
-            <PropertyRef Name="GradeGroup" />
-          </Key>
-          <Property Name="GradeGroup" Type="smallint" Nullable="false" />
-          <Property Name="GradeGroupName" Type="nvarchar" MaxLength="250" Nullable="false" />
-          <Property Name="GradeGroupAName" Type="nvarchar" MaxLength="250" Nullable="false" />
-          <Property Name="GradeGroupFName" Type="nvarchar" MaxLength="250" Nullable="false" />
-          <Property Name="GradeGroupOrder" Type="smallint" Nullable="false" />
-          <Property Name="GradeGroupCons" Type="int" Nullable="false" />
-          <Property Name="GradeGroupNameCons" Type="nvarchar" MaxLength="250" Nullable="false" />
-          <Property Name="GradeGroupANameCons" Type="nvarchar" MaxLength="250" Nullable="false" />
-          <Property Name="GradeGroupFNameCons" Type="nvarchar" MaxLength="250" Nullable="false" />
-          <Property Name="GradeGroupFromDate" Type="smalldatetime" />
-          <Property Name="GradeGroupToDate" Type="smalldatetime" />
-          <Property Name="GradeGroupsRoles" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="GradeGroupsOrgs" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="GradeGroupsRYear" Type="smallint" Nullable="false" />
-          <Property Name="GradeGroupsRNo" Type="nvarchar" MaxLength="10" Nullable="false" />
-          <Property Name="GradeGroupsRIssueDate" Type="datetime" />
-          <Property Name="GradeGroupsRExecDate" Type="datetime" />
-          <Property Name="GradeGroupsRStatus" Type="smallint" />
-          <Property Name="GradeGroupsRSource" Type="smallint" />
-          <Property Name="GradeGroupsRDesc" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="GradeGroupsGUID" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="UEnterBy" Type="nvarchar" MaxLength="80" Nullable="false" />
-          <Property Name="UEnterDate" Type="smalldatetime" />
-          <Property Name="UChangeBy" Type="nvarchar" MaxLength="80" Nullable="false" />
-          <Property Name="UChangeDate" Type="smalldatetime" />
-          <Property Name="ReviewedBy" Type="nvarchar" MaxLength="80" Nullable="false" />
-          <Property Name="ReviewedDate" Type="smalldatetime" />
-          <Property Name="ApprovedBy" Type="nvarchar" MaxLength="80" Nullable="false" />
-          <Property Name="ApprovedDate" Type="smalldatetime" />
-          <Property Name="CodeStatus" Type="int" />
-          <Property Name="GradeGroupsOrder" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Grades">
+      <Schema Namespace="MyDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="MyTable">
           <Key>
             <PropertyRef Name="Grade" />
           </Key>
-          <Property Name="Grade" Type="smallint" Nullable="false" />
-          <Property Name="GradeName" Type="nvarchar" MaxLength="250" Nullable="false" />
-          <Property Name="GradeAName" Type="nvarchar" MaxLength="250" Nullable="false" />
-          <Property Name="GradeFName" Type="nvarchar" MaxLength="250" Nullable="false" />
-          <Property Name="GradeYears" Type="smallint" Nullable="false" />
-          <Property Name="GradeStepAmount" Type="numeric" Precision="18" Scale="3" Nullable="false" />
-          <Property Name="GradeOrder" Type="smallint" Nullable="false" />
-          <Property Name="GradeGroup" Type="smallint" />
-          <Property Name="bcount" Type="smallint" Nullable="false" />
-          <Property Name="bsalary" Type="numeric" Precision="18" Scale="3" Nullable="false" />
-          <Property Name="level_priv" Type="smallint" Nullable="false" />
-          <Property Name="GradeCons" Type="int" Nullable="false" />
-          <Property Name="GradeNameCons" Type="nvarchar" MaxLength="250" Nullable="false" />
-          <Property Name="GradeANameCons" Type="nvarchar" MaxLength="250" Nullable="false" />
-          <Property Name="GradeFNameCons" Type="nvarchar" MaxLength="250" Nullable="false" />
-          <Property Name="GradeFromDate" Type="smalldatetime" />
-          <Property Name="GradeToDate" Type="smalldatetime" />
-          <Property Name="GradesRoles" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="GradesOrgs" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="GradesRYear" Type="smallint" Nullable="false" />
-          <Property Name="GradesRNo" Type="nvarchar" MaxLength="10" Nullable="false" />
-          <Property Name="GradesRIssueDate" Type="datetime" />
-          <Property Name="GradesRExecDate" Type="datetime" />
-          <Property Name="GradesRStatus" Type="smallint" />
-          <Property Name="GradesRSource" Type="smallint" />
-          <Property Name="GradesRDesc" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="GradesGUID" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="UEnterBy" Type="nvarchar" MaxLength="80" />
-          <Property Name="UEnterDate" Type="smalldatetime" />
-          <Property Name="UChangeBy" Type="nvarchar" MaxLength="80" />
-          <Property Name="UChangeDate" Type="smalldatetime" />
-          <Property Name="ReviewedBy" Type="nvarchar" MaxLength="80" Nullable="false" />
-          <Property Name="ReviewedDate" Type="smalldatetime" />
-          <Property Name="ApprovedBy" Type="nvarchar" MaxLength="80" Nullable="false" />
-          <Property Name="ApprovedDate" Type="smalldatetime" />
-          <Property Name="CodeStatus" Type="int" />
-          <Property Name="GradesOrder" Type="int" Nullable="false" />
+          <Property Name="Grade" Type="int" Nullable="false" />
+          <Property Name="GradeName" Type="nvarchar(max)" />
+          <Property Name="GradeGroupName" Type="nvarchar(max)" />
+          <Property Name="GradeCons" Type="int" />
+          <Property Name="GradeNameCons" Type="nvarchar(max)" />
         </EntityType>
-        <Association Name="FK_Grades_GradeGroups">
-          <End Role="GradeGroups" Type="Self.GradeGroups" Multiplicity="0..1" />
-          <End Role="Grades" Type="Self.Grades" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="GradeGroups">
-              <PropertyRef Name="GradeGroup" />
-            </Principal>
-            <Dependent Role="Grades">
-              <PropertyRef Name="GradeGroup" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="DNACloudDBModelStoreContainer">
-          <EntitySet Name="GradeGroups" EntityType="Self.GradeGroups" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Grades" EntityType="Self.Grades" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Grades_GradeGroups" Association="Self.FK_Grades_GradeGroups">
-            <End Role="GradeGroups" EntitySet="GradeGroups" />
-            <End Role="Grades" EntitySet="Grades" />
-          </AssociationSet>
+        <EntityContainer Name="MyDatabaseModelStoreContainer">
+          <EntitySet Name="MyTable" EntityType="Self.MyTable" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="DNACloudDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="GradeGroup">
+      <Schema Namespace="MyDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="MyTable">
           <Key>
-            <PropertyRef Name="GradeGroup1" />
+            <PropertyRef Name="Grade" />
           </Key>
-          <Property Name="GradeGroup1" Type="Int16" Nullable="false" />
-          <Property Name="GradeGroupName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="GradeGroupAName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="GradeGroupFName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="GradeGroupOrder" Type="Int16" Nullable="false" />
-          <Property Name="GradeGroupCons" Type="Int32" Nullable="false" />
-          <Property Name="GradeGroupNameCons" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="GradeGroupANameCons" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="GradeGroupFNameCons" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="GradeGroupFromDate" Type="DateTime" Precision="0" />
-          <Property Name="GradeGroupToDate" Type="DateTime" Precision="0" />
-          <Property Name="GradeGroupsRoles" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="GradeGroupsOrgs" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="GradeGroupsRYear" Type="Int16" Nullable="false" />
-          <Property Name="GradeGroupsRNo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="GradeGroupsRIssueDate" Type="DateTime" Precision="3" />
-          <Property Name="GradeGroupsRExecDate" Type="DateTime" Precision="3" />
-          <Property Name="GradeGroupsRStatus" Type="Int16" />
-          <Property Name="GradeGroupsRSource" Type="Int16" />
-          <Property Name="GradeGroupsRDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="GradeGroupsGUID" Type="Guid" Nullable="false" />
-          <Property Name="UEnterBy" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="UEnterDate" Type="DateTime" Precision="0" />
-          <Property Name="UChangeBy" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="UChangeDate" Type="DateTime" Precision="0" />
-          <Property Name="ReviewedBy" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ReviewedDate" Type="DateTime" Precision="0" />
-          <Property Name="ApprovedBy" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ApprovedDate" Type="DateTime" Precision="0" />
-          <Property Name="CodeStatus" Type="Int32" />
-          <Property Name="GradeGroupsOrder" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Grades" Relationship="Self.FK_Grades_GradeGroups" FromRole="GradeGroups" ToRole="Grades" />
+          <Property Name="Grade" Type="Int32" Nullable="false" />
+          <Property Name="GradeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GradeGroupName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GradeCons" Type="Int32" />
+          <Property Name="GradeNameCons" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="Grade">
-          <Key>
-            <PropertyRef Name="Grade1" />
-          </Key>
-          <Property Name="Grade1" Type="Int16" Nullable="false" />
-          <Property Name="GradeName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="GradeAName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="GradeFName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="GradeYears" Type="Int16" Nullable="false" />
-          <Property Name="GradeStepAmount" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
-          <Property Name="GradeOrder" Type="Int16" Nullable="false" />
-          <Property Name="GradeGroup" Type="Int16" />
-          <Property Name="bcount" Type="Int16" Nullable="false" />
-          <Property Name="bsalary" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
-          <Property Name="level_priv" Type="Int16" Nullable="false" />
-          <Property Name="GradeCons" Type="Int32" Nullable="false" />
-          <Property Name="GradeNameCons" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="GradeANameCons" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="GradeFNameCons" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="GradeFromDate" Type="DateTime" Precision="0" />
-          <Property Name="GradeToDate" Type="DateTime" Precision="0" />
-          <Property Name="GradesRoles" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="GradesOrgs" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="GradesRYear" Type="Int16" Nullable="false" />
-          <Property Name="GradesRNo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="GradesRIssueDate" Type="DateTime" Precision="3" />
-          <Property Name="GradesRExecDate" Type="DateTime" Precision="3" />
-          <Property Name="GradesRStatus" Type="Int16" />
-          <Property Name="GradesRSource" Type="Int16" />
-          <Property Name="GradesRDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="GradesGUID" Type="Guid" Nullable="false" />
-          <Property Name="UEnterBy" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
-          <Property Name="UEnterDate" Type="DateTime" Precision="0" />
-          <Property Name="UChangeBy" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
-          <Property Name="UChangeDate" Type="DateTime" Precision="0" />
-          <Property Name="ReviewedBy" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ReviewedDate" Type="DateTime" Precision="0" />
-          <Property Name="ApprovedBy" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ApprovedDate" Type="DateTime" Precision="0" />
-          <Property Name="CodeStatus" Type="Int32" />
-          <Property Name="GradesOrder" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="GradeGroup1" Relationship="Self.FK_Grades_GradeGroups" FromRole="Grades" ToRole="GradeGroups" />
-        </EntityType>
-        <Association Name="FK_Grades_GradeGroups">
-          <End Role="GradeGroups" Type="Self.GradeGroup" Multiplicity="0..1" />
-          <End Role="Grades" Type="Self.Grade" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="GradeGroups">
-              <PropertyRef Name="GradeGroup1" />
-            </Principal>
-            <Dependent Role="Grades">
-              <PropertyRef Name="GradeGroup" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="GradeGroups" EntityType="Self.GradeGroup" />
-          <EntitySet Name="Grades" EntityType="Self.Grade" />
-          <AssociationSet Name="FK_Grades_GradeGroups" Association="Self.FK_Grades_GradeGroups">
-            <End Role="GradeGroups" EntitySet="GradeGroups" />
-            <End Role="Grades" EntitySet="Grades" />
-          </AssociationSet>
+        <EntityContainer Name="MyDatabaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MyTables" EntityType="Self.MyTable" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DNACloudDBModelStoreContainer" CdmEntityContainer="Entities">
-          <EntitySetMapping Name="GradeGroups">
-            <EntityTypeMapping TypeName="DNACloudDBModel.GradeGroup">
-              <MappingFragment StoreEntitySet="GradeGroups">
-                <ScalarProperty Name="GradeGroup1" ColumnName="GradeGroup" />
-                <ScalarProperty Name="GradeGroupName" ColumnName="GradeGroupName" />
-                <ScalarProperty Name="GradeGroupAName" ColumnName="GradeGroupAName" />
-                <ScalarProperty Name="GradeGroupFName" ColumnName="GradeGroupFName" />
-                <ScalarProperty Name="GradeGroupOrder" ColumnName="GradeGroupOrder" />
-                <ScalarProperty Name="GradeGroupCons" ColumnName="GradeGroupCons" />
-                <ScalarProperty Name="GradeGroupNameCons" ColumnName="GradeGroupNameCons" />
-                <ScalarProperty Name="GradeGroupANameCons" ColumnName="GradeGroupANameCons" />
-                <ScalarProperty Name="GradeGroupFNameCons" ColumnName="GradeGroupFNameCons" />
-                <ScalarProperty Name="GradeGroupFromDate" ColumnName="GradeGroupFromDate" />
-                <ScalarProperty Name="GradeGroupToDate" ColumnName="GradeGroupToDate" />
-                <ScalarProperty Name="GradeGroupsRoles" ColumnName="GradeGroupsRoles" />
-                <ScalarProperty Name="GradeGroupsOrgs" ColumnName="GradeGroupsOrgs" />
-                <ScalarProperty Name="GradeGroupsRYear" ColumnName="GradeGroupsRYear" />
-                <ScalarProperty Name="GradeGroupsRNo" ColumnName="GradeGroupsRNo" />
-                <ScalarProperty Name="GradeGroupsRIssueDate" ColumnName="GradeGroupsRIssueDate" />
-                <ScalarProperty Name="GradeGroupsRExecDate" ColumnName="GradeGroupsRExecDate" />
-                <ScalarProperty Name="GradeGroupsRStatus" ColumnName="GradeGroupsRStatus" />
-                <ScalarProperty Name="GradeGroupsRSource" ColumnName="GradeGroupsRSource" />
-                <ScalarProperty Name="GradeGroupsRDesc" ColumnName="GradeGroupsRDesc" />
-                <ScalarProperty Name="GradeGroupsGUID" ColumnName="GradeGroupsGUID" />
-                <ScalarProperty Name="UEnterBy" ColumnName="UEnterBy" />
-                <ScalarProperty Name="UEnterDate" ColumnName="UEnterDate" />
-                <ScalarProperty Name="UChangeBy" ColumnName="UChangeBy" />
-                <ScalarProperty Name="UChangeDate" ColumnName="UChangeDate" />
-                <ScalarProperty Name="ReviewedBy" ColumnName="ReviewedBy" />
-                <ScalarProperty Name="ReviewedDate" ColumnName="ReviewedDate" />
-                <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
-                <ScalarProperty Name="ApprovedDate" ColumnName="ApprovedDate" />
-                <ScalarProperty Name="CodeStatus" ColumnName="CodeStatus" />
-                <ScalarProperty Name="GradeGroupsOrder" ColumnName="GradeGroupsOrder" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Grades">
-            <EntityTypeMapping TypeName="DNACloudDBModel.Grade">
-              <MappingFragment StoreEntitySet="Grades">
-                <ScalarProperty Name="Grade1" ColumnName="Grade" />
+        <EntityContainerMapping StorageEntityContainer="MyDatabaseModelStoreContainer" CdmEntityContainer="MyDatabaseEntities">
+          <EntitySetMapping Name="MyTables">
+            <EntityTypeMapping TypeName="MyDatabaseModel.MyTable">
+              <MappingFragment StoreEntitySet="MyTable">
+                <ScalarProperty Name="Grade" ColumnName="Grade" />
                 <ScalarProperty Name="GradeName" ColumnName="GradeName" />
-                <ScalarProperty Name="GradeAName" ColumnName="GradeAName" />
-                <ScalarProperty Name="GradeFName" ColumnName="GradeFName" />
-                <ScalarProperty Name="GradeYears" ColumnName="GradeYears" />
-                <ScalarProperty Name="GradeStepAmount" ColumnName="GradeStepAmount" />
-                <ScalarProperty Name="GradeOrder" ColumnName="GradeOrder" />
-                <ScalarProperty Name="GradeGroup" ColumnName="GradeGroup" />
-                <ScalarProperty Name="bcount" ColumnName="bcount" />
-                <ScalarProperty Name="bsalary" ColumnName="bsalary" />
-                <ScalarProperty Name="level_priv" ColumnName="level_priv" />
+                <ScalarProperty Name="GradeGroupName" ColumnName="GradeGroupName" />
                 <ScalarProperty Name="GradeCons" ColumnName="GradeCons" />
                 <ScalarProperty Name="GradeNameCons" ColumnName="GradeNameCons" />
-                <ScalarProperty Name="GradeANameCons" ColumnName="GradeANameCons" />
-                <ScalarProperty Name="GradeFNameCons" ColumnName="GradeFNameCons" />
-                <ScalarProperty Name="GradeFromDate" ColumnName="GradeFromDate" />
-                <ScalarProperty Name="GradeToDate" ColumnName="GradeToDate" />
-                <ScalarProperty Name="GradesRoles" ColumnName="GradesRoles" />
-                <ScalarProperty Name="GradesOrgs" ColumnName="GradesOrgs" />
-                <ScalarProperty Name="GradesRYear" ColumnName="GradesRYear" />
-                <ScalarProperty Name="GradesRNo" ColumnName="GradesRNo" />
-                <ScalarProperty Name="GradesRIssueDate" ColumnName="GradesRIssueDate" />
-                <ScalarProperty Name="GradesRExecDate" ColumnName="GradesRExecDate" />
-                <ScalarProperty Name="GradesRStatus" ColumnName="GradesRStatus" />
-                <ScalarProperty Name="GradesRSource" ColumnName="GradesRSource" />
-                <ScalarProperty Name="GradesRDesc" ColumnName="GradesRDesc" />
-                <ScalarProperty Name="GradesGUID" ColumnName="GradesGUID" />
-                <ScalarProperty Name="UEnterBy" ColumnName="UEnterBy" />
-                <ScalarProperty Name="UEnterDate" ColumnName="UEnterDate" />
-                <ScalarProperty Name="UChangeBy" ColumnName="UChangeBy" />
-                <ScalarProperty Name="UChangeDate" ColumnName="UChangeDate" />
-                <ScalarProperty Name="ReviewedBy" ColumnName="ReviewedBy" />
-                <ScalarProperty Name="ReviewedDate" ColumnName="ReviewedDate" />
-                <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
-                <ScalarProperty Name="ApprovedDate" ColumnName="ApprovedDate" />
-                <ScalarProperty Name="CodeStatus" ColumnName="CodeStatus" />
-                <ScalarProperty Name="GradesOrder" ColumnName="GradesOrder" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

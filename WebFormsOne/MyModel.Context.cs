@@ -13,10 +13,10 @@ namespace WebFormsOne
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entities : DbContext
+    public partial class MyDatabaseEntities : DbContext
     {
-        public Entities()
-            : base("name=Entities")
+        public MyDatabaseEntities()
+            : base("name=MyDatabaseEntities")
         {
         }
     
@@ -25,7 +25,6 @@ namespace WebFormsOne
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<GradeGroup> GradeGroups { get; set; }
-        public DbSet<Grade> Grades { get; set; }
+        public DbSet<MyTable> MyTables { get; set; }
     }
 }
